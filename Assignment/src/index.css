@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad&display=swap');
+#root {
+    font-family: 'Afacad', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 2;
+}
+
+.search-box{
+    border: 1px solidrgb(224, 223, 235);
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    width: 300px;
+    justify-content: space-between;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-box input {
+    outline: none;
+    border: none;
+    flex-grow: 2;
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.profile-img{
+    width: 40px;
+    height: 40px;
+    background-color: #00E4EC;
+    border-radius: 25%;
+}
+
+.btn{
+    width: 40px;
+    height: 40px;
+    background-color:#3734A9;
+    color: white;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 25%;
+}
+
+.sidebar{
+    width: 200px;
+    height: 100vh;
+    background-color: #F5F9FF;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    padding-top: 80px;
+}
+
+
+
+
+
