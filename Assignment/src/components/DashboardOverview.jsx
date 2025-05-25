@@ -3,11 +3,8 @@ import anatomy from '../assets/images/anatomy.png'
 import lungs from '../assets/images/lungs.png'
 import tooth from '../assets/images/tooth.png'
 import bone from '../assets/images/bone.png'
-
-import { FaLungs } from "react-icons/fa";
-import { FaTooth } from "react-icons/fa";
-import { PiBoneFill } from "react-icons/pi";
 import StatusCard from './Cards/StatusCard';
+import Activity from './Activity/ActivityComponent';
 
 export default function DashboardOverview() {
 
@@ -18,6 +15,7 @@ export default function DashboardOverview() {
             value: 75,
             color: '#ac4447',
             icon: lungs,
+            alt: 'lungs image'
         },
         {
             name: 'Tooth',
@@ -25,6 +23,7 @@ export default function DashboardOverview() {
             value: 75,
             color: '#7dcdba',
             icon: tooth,
+            alt: 'tooth image'
         },
         {
             name: 'Bone',
@@ -32,26 +31,21 @@ export default function DashboardOverview() {
             value: 75,
             color: '#fb7157',
             icon: bone,
+            alt: 'bone image'
         }
     ]
 
 
     return (
         <div className='dashboard-overview'>
-            <div style={{
-                display: 'flex',
-                alignItems: 'center',
-                flexWrap: 'wrap',
-                justifyContent: 'space-between',
-                color: '#3734A9'
-            }}>
+            <div className='dashboard-head'>
                 <h2>Dashboard</h2>
                 <h3>This weak</h3>
             </div>
 
             <div className='anatomy-section'>
                 <div className='anatomy-img'>
-                    <img src={anatomy} alt="" />
+                    <img src={anatomy} alt="anatomy image" />
                 </div>
                 <div className='status-card-container' >
                     {
@@ -63,6 +57,7 @@ export default function DashboardOverview() {
                                 icon={organ.icon}
                                 value={organ.value}
                                 color={organ.color}
+                                alt={organ.alt}
                             />
                         ))
                     }
@@ -70,8 +65,7 @@ export default function DashboardOverview() {
             </div>
 
             <div className='activity'>
-                <p>s adipisci architecto fugit culpa sapiente laborum nobis similique.</p>
-                <p>s adipisci architecto fugit culpa sapiente laborum nobis similique.</p>
+                <Activity />
             </div>
         </div>
     )

@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from 'prop-types'
 
 
-function StatusCard({ name, date, icon, value, color = 'green' }) {
+function StatusCard({ name, date, icon, value, color = 'green', alt }) {
     return (
         <div>
             <div className="status-card">
@@ -15,7 +15,7 @@ function StatusCard({ name, date, icon, value, color = 'green' }) {
                         paddingLeft: '5px',
                         width: "28px",
                         height: "28px"
-                    }} alt="" />
+                    }} alt={alt} />
                     <span style={{
                         fontSize: '1.5rem',
                         fontWeight: 'bold',
