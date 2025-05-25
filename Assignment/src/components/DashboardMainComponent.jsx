@@ -1,9 +1,12 @@
 import React from 'react'
+import DashboardOverview from './DashboardOverview'
+import CalendarOverview from './CalendarOverview'
 
 function DashboardMainComponent() {
     return (
-        <div>
-
+        <div className='dashboard-main-component'>
+            <DashboardOverview />
+            <CalendarOverview />
         </div>
     )
 }

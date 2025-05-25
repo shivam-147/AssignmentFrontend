@@ -1,5 +1,9 @@
 import React from 'react';
 import anatomy from '../assets/images/anatomy.png'
+import lungs from '../assets/images/lungs.png'
+import tooth from '../assets/images/tooth.png'
+import bone from '../assets/images/bone.png'
+
 import { FaLungs } from "react-icons/fa";
 import { FaTooth } from "react-icons/fa";
 import { PiBoneFill } from "react-icons/pi";
@@ -13,30 +17,21 @@ export default function DashboardOverview() {
             date: 'Date: 26 Oct 2001',
             value: 75,
             color: '#ac4447',
-            Icon: () => (<FaLungs style={{
-                color: '#EF7878',
-                fontSize: '30px'
-            }} />),
+            icon: lungs,
         },
         {
             name: 'Tooth',
             date: 'Date: 26 Oct 2001',
             value: 75,
             color: '#7dcdba',
-            Icon: () => (<FaTooth style={{
-                color: '#D2C5AB',
-                fontSize: '30px'
-            }} />),
+            icon: tooth,
         },
         {
             name: 'Bone',
             date: 'Date: 26 oct 2001',
             value: 75,
             color: '#fb7157',
-            Icon: () => (<PiBoneFill style={{
-                color: "#BEC1D0",
-                fontSize: '30px'
-            }} />),
+            icon: bone,
         }
     ]
 
@@ -46,14 +41,16 @@ export default function DashboardOverview() {
             <div style={{
                 display: 'flex',
                 alignItems: 'center',
+                flexWrap: 'wrap',
                 justifyContent: 'space-between',
                 color: '#3734A9'
             }}>
                 <h2>Dashboard</h2>
                 <h3>This weak</h3>
             </div>
+
             <div className='anatomy-section'>
-                <div>
+                <div className='anatomy-img'>
                     <img src={anatomy} alt="" />
                 </div>
                 <div className='status-card-container' >
@@ -63,14 +60,18 @@ export default function DashboardOverview() {
                                 key={index}
                                 name={organ.name}
                                 date={organ.date}
-                                Icon={organ.Icon}
+                                icon={organ.icon}
                                 value={organ.value}
                                 color={organ.color}
-                                iconColor={organ.iconColor}
                             />
                         ))
                     }
                 </div>
+            </div>
+
+            <div className='activity'>
+                <p>s adipisci architecto fugit culpa sapiente laborum nobis similique.</p>
+                <p>s adipisci architecto fugit culpa sapiente laborum nobis similique.</p>
             </div>
         </div>
     )

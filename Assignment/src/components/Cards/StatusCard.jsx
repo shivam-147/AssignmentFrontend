@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from 'prop-types'
 
 
-function StatusCard({ name, date, Icon, value, color = 'green' }) {
+function StatusCard({ name, date, icon, value, color = 'green' }) {
     return (
         <div>
             <div className="status-card">
@@ -11,7 +11,11 @@ function StatusCard({ name, date, Icon, value, color = 'green' }) {
                     alignItems: 'center',
                     gap: '10px',
                 }}>
-                    <Icon />
+                    <img src={icon} style={{
+                        paddingLeft: '5px',
+                        width: "28px",
+                        height: "28px"
+                    }} alt="" />
                     <span style={{
                         fontSize: '1.5rem',
                         fontWeight: 'bold',
