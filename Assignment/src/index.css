@@ -12,25 +12,28 @@
     align-items: center;
     padding: 0 20px;
     z-index: 2;
+    whidth: calc(100% - 40px);
 }
 
 .search-box{
-    border: 1px solidrgb(224, 223, 235);
+    border: 1px solid rgb(224, 223, 235);
     border-radius: 3px;
     display: flex;
     align-items: center;
-    padding: 5px;
-    width: 300px;
+    padding: 6px;
     justify-content: space-between;
     background-color: white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 25em;
 }
 
 .search-box input {
     outline: none;
     border: none;
     flex-grow: 2;
-    padding: 4px;
+    padding: 5px;
+    font-size: 16px;
+    margin: 5px, 0;
 }
 
 .profile{
@@ -56,7 +59,7 @@
 }
 
 .sidebar{
-    width: 200px;
+    width: 180px;
     height: 100vh;
     background-color: #F5F9FF;
     padding: 20px;
@@ -64,18 +67,16 @@
     top: 0;
     left: 0;
     z-index: -1;
-    padding-top: 80px;
-}
-
-.sidebar{
+    padding-top: 80px, 20px 20, 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding: 20px 20px;
 }
+
 
 .sidebar h3{
     color: #bbb;
+    margin-left: 35px;
 }
 
 .sidebar .dashboard{
@@ -96,4 +97,44 @@ li a {
     color: #bbb;
     font-weight: semibold;
 }
+
+
+.status-card{
+    background-color: #F5F9FF;
+    padding: 10px;
+    border-radius: 20px;
+    
+}
+
+.anatomy-section{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px 30px;
+    flex-wrap: wrap;
+}
+
+.status-card-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding-top: 0;
+    }
+    .main-content {
+        width: 100vh;
+        margin-left: 0;
+    }
+    .header{
+        width: 100vh;
+        padding: 0 0;
+    }
+}
+
 
