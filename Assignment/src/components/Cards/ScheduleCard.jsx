@@ -41,7 +41,7 @@ function ApointmentCard({ type, img, time }) {
             </div>
             <span>{time}</span>
         </div>
-    )
+    );
 }
 
 export default ApointmentCard

@@ -39,17 +39,17 @@ function CalendarOverview() {
 
 
     return (
-        <div className='calendar-overview'>
-
-
-            <div className="cal-header" style={{
-
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'space-between',
-                color: '#3734A9'
-
-            }}>
+        <div className="calendar-overview">
+            {/* Calendar Header */}
+            <div
+                className="cal-header"
+                style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                    color: "#3734A9",
+                }}
+            >
                 <h2>October 2021</h2>
                 <div>
                     <span>
@@ -61,93 +61,96 @@ function CalendarOverview() {
                 </div>
             </div>
 
-
-            <div className="cal-card" style={{
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'center'
-            }}>
-                {
-                    arr.map((obj, index) => (
-                        <CalendarCard key={index}
-                            day={obj.day}
-                            date={obj.date}
-                            times={obj.times}
-                            apt={obj.apt}
-                            bgcolor={obj.bgcolor}
-                        />
-                    ))
-                }
-            </div>
-
-
-            <div className="appointment-card"
+            {/* Calendar Cards */}
+            <div
+                className="cal-card"
                 style={{
-                    display: 'flex',
-                    flexWrap: 'wrap',
-                    paddingTop: '10px'
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
                 }}
             >
+                {arr.map((obj, index) => (
+                    <CalendarCard
+                        key={index}
+                        day={obj.day}
+                        date={obj.date}
+                        times={obj.times}
+                        apt={obj.apt}
+                        bgcolor={obj.bgcolor}
+                    />
+                ))}
+            </div>
 
-                {
-                    appointments.map((apt, idx) => (
-                        <AppointmentCard key={idx}
-                            type={apt.type}
-                            img={apt.img}
-                            time={apt.time}
-                            doctorName={apt.doctorName}
-                            bgColor={apt.bgColor}
-                            color={apt.color}
+            {/* Appointment Cards */}
+            <div
+                className="appointment-card"
+                style={{
+                    display: "flex",
+                    flexWrap: "wrap",
+                    paddingTop: "10px",
+                }}
+            >
+                {appointments.map((apt, idx) => (
+                    <AppointmentCard
+                        key={idx}
+                        type={apt.type}
+                        img={apt.img}
+                        time={apt.time}
+                        doctorName={apt.doctorName}
+                        bgColor={apt.bgColor}
+                        color={apt.color}
+                    />
+                ))}
+            </div>
+
+            {/* Upcoming Schedules */}
+            <h2
+                style={{
+                    color: "#28244D",
+                    fontSize: "20px",
+                }}
+            >
+                The Upcoming Schedules
+            </h2>
+
+            {/* Thursday Schedule */}
+            <div>
+                <span style={{ color: "#353658" }}>On Thurday</span>
+                <div
+                    style={{
+                        display: "flex",
+                    }}
+                >
+                    {thursday.map((ele, idx) => (
+                        <ScheduleCard
+                            key={idx}
+                            type={ele.content}
+                            img={ele.img}
+                            time={ele.time}
                         />
-                    ))
-                }
-
-            </div>
-            <h2 style={{
-                color: '#28244D',
-                fontSize: '20px'
-            }} >The Upcoming Schedules</h2>
-
-            {/* Thursday */}
-            <div>
-                <span style={{ color: '#353658' }}>On Thurday</span>
-                <div style={{
-                    display: 'flex'
-
-                }}>
-                    {
-                        thursday.map((ele, idx) => (
-                            <ScheduleCard
-                                type={ele.content}
-                                img={ele.img}
-                                time={ele.time}
-                            />
-                        ))
-                    }
+                    ))}
                 </div>
             </div>
 
-            {/* Saturday */}
+            {/* Saturday Schedule */}
             <div>
-                <span style={{ color: '#353658' }}>On Saturday</span>
-
-                <div style={{
-                    display: 'flex'
-
-                }}>
-                    {
-                        saturday.map((ele, idx) => (
-                            <ScheduleCard
-                                type={ele.content}
-                                img={ele.img}
-                                time={ele.time}
-                            />
-                        ))
-                    }
+                <span style={{ color: "#353658" }}>On Saturday</span>
+                <div
+                    style={{
+                        display: "flex",
+                    }}
+                >
+                    {saturday.map((ele, idx) => (
+                        <ScheduleCard
+                            key={idx}
+                            type={ele.content}
+                            img={ele.img}
+                            time={ele.time}
+                        />
+                    ))}
                 </div>
-
             </div>
-
         </div>
     )
 }

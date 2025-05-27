@@ -1,4 +1,3 @@
-import React from 'react';
 import anatomy from '../assets/images/anatomy.png'
 import lungs from '../assets/images/lungs.png'
 import tooth from '../assets/images/tooth.png'
