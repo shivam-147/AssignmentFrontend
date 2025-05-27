@@ -15,7 +15,7 @@ function ActivityComponent() {
 
     return (
         <div className="chart-container">
-            <div className="header">
+            <div className="chart-header">
                 <div>Activity</div>
                 <div className="appointments">3 appointment on this week</div>
             </div>

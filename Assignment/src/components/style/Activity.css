@@ -8,9 +8,10 @@
     margin: 0 auto; 
   }
   
-  .header {
+  .chart-header {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin-bottom: 10px;
     color: #3734A9;
     font-weight: bold;

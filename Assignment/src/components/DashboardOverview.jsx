@@ -5,6 +5,10 @@ import tooth from '../assets/images/tooth.png'
 import bone from '../assets/images/bone.png'
 import StatusCard from './Cards/StatusCard';
 import Activity from './Activity/ActivityComponent';
+import { FiZoomIn } from "react-icons/fi";
+import heart from '../assets/images/heart.png'
+import leg from '../assets/images/leg.png'
+import ScannerCard from './Cards/ScannerCard';
 
 export default function DashboardOverview() {
 
@@ -39,12 +43,40 @@ export default function DashboardOverview() {
     return (
         <div className='dashboard-overview'>
             <div className='dashboard-head'>
-                <h2>Dashboard</h2>
-                <h3>This weak</h3>
+                <h2 style={{
+                    color: '#2F32A4'
+                }}>Dashboard</h2>
+                <h3
+                    style={{
+                        color: '#2F32A4'
+                    }}>This weak</h3>
             </div>
 
             <div className='anatomy-section'>
+
                 <div className='anatomy-img'>
+                    <FiZoomIn style={{
+                        fontSize: '20px',
+                        position: 'absolute',
+                        right: '20px',
+                        top: '20px',
+                        color: '#353658',
+                        fontWeight: ''
+                    }} />
+
+                    <ScannerCard
+                        bgColor='#2F32A4'
+                        img={heart}
+                        content="Healthy Heart"
+                        positions={{ top: '80px', right: '-35px' }}
+                    />
+
+                    <ScannerCard
+                        bgColor="#1ADEED"
+                        img={leg}
+                        content='Healthy Leg'
+                        positions={{ bottom: '95px', left: '-15px' }}
+                    />
                     <img src={anatomy} alt="anatomy image" />
                 </div>
                 <div className='status-card-container' >

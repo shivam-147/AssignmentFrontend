@@ -3,6 +3,7 @@
     font-family: 'Afacad', sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 .header{
@@ -12,7 +13,7 @@
     align-items: center;
     padding: 0 20px;
     z-index: 2;
-    whidth: calc(100% - 40px);
+    width: 96vw;
 }
 
 .search-box{
@@ -24,7 +25,7 @@
     justify-content: space-between;
     background-color: white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 25em;
+    width: 35%;
 }
 
 .search-box input {
@@ -120,14 +121,15 @@ li a {
     align-items: center;
     justify-content: center;
     padding: 20px;
-    overflow: hidden;
     border-radius: 20px;
+    position: relative;
 }
 
 .anatomy-img img{
     width: 100%;
     height: 100%;
     object-fit: contain;
+    
 }
 
 .anatomy-section{
@@ -140,7 +142,6 @@ li a {
 
 .dashboard-overview{
     padding: 0 20px;
-    border: 3px solid red;
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -161,11 +162,24 @@ li a {
 }
 
 
+.calendar-overview{
+    background: #F5F9FF;
+    padding: 0 20px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.apt-card-head h4{
+    margin: ;
+}
+
 @media (max-width: 900px){
     .status-card{
         width: 200px;
     }
-    .header{
-        width: 100vh;
+    .search-box input{
+        flex-grow: 1;
     }
 }
