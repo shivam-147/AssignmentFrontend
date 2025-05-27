@@ -72,7 +72,7 @@ export default function DashboardOverview() {
 
                     <ScannerCard
                         bgColor="#1ADEED"
-                        img={leg}
+                        img='src\assets\images\leg.png'
                         content='Healthy Leg'
                         positions={{ bottom: '95px', left: '-15px' }}
                     />
