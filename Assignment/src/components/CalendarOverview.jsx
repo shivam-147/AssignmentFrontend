@@ -67,6 +67,7 @@ function CalendarOverview() {
                 style={{
                     display: "flex",
                     justifyContent: "space-between",
+                    flexWrap: 'wrap',
                     alignItems: "center",
                 }}
             >
@@ -120,6 +121,7 @@ function CalendarOverview() {
                 <div
                     style={{
                         display: "flex",
+                        flexWrap: "wrap"
                     }}
                 >
                     {thursday.map((ele, idx) => (
