@@ -6,7 +6,6 @@ import StatusCard from './Cards/StatusCard';
 import Activity from './Activity/ActivityComponent';
 import { FiZoomIn } from "react-icons/fi";
 import heart from '../assets/images/heart.png'
-import leg from '../assets/images/leg.png'
 import ScannerCard from './Cards/ScannerCard';
 
 export default function DashboardOverview() {
